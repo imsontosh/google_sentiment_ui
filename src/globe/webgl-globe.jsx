@@ -11,13 +11,13 @@ class WebGLGlobe extends Component {
         <div className="globeParent" ref="container" />
 
         <div id="currentInfo">
-          <span ref="year1990" className="year">1990</span>
-          <span ref="year1995" className="year">1995</span>
-          <span ref="year2000" className="year">2000</span>
+          <span ref="year1990" className="year">Positive</span>
+          <span ref="year1995" className="year">Negative</span>
+          <span ref="year2000" className="year">Neutral</span>
         </div>
 
         <div id="title">
-          World Population
+          Global Analysis
         </div>
 
       </div>
