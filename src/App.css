@@ -1,0 +1,159 @@
+
+
+.App-logo
+{
+    height: 80px;
+
+    animation: App-logo-spin infinite 20s linear;
+}
+
+.App-header
+{
+    height: 50px;
+    padding: 20px;
+
+    text-align: left;
+
+    color: white;
+    background-color: #222;
+}
+
+.App-title
+{
+    font-size: 1.5em;
+}
+
+.App-intro
+{
+    font-size: large;
+}
+
+.fluid_parent
+{
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.show-grid
+{
+    font-size: 40px;
+
+    text-align: center ;
+}
+
+
+#info
+{
+    font-size: 11px;
+
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+
+    padding: 10px;
+
+    border-radius: 3px;
+    background-color: rgba(0,0,0,.8);
+}
+
+#currentInfo
+{
+    position: absolute;
+    top: 75px;
+    left: 28px;
+
+    width: 270px;
+    padding: 10px;
+
+    border-top: 1px solid rgba(255,255,255,.4);
+    background-color: rgba(0,0,0,.2);
+}
+
+a
+{
+    text-decoration: none;
+
+    color: #aaa;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+.bull
+{
+    padding: 0 5px;
+
+    color: #555;
+}
+
+#title
+{
+    font: 20px Georgia;
+
+    position: absolute;
+    top: 35px;
+    left: 20px;
+
+    width: 270px;
+    padding: 10px;
+
+    color: whitesmoke;
+    /* background-color: rgba(0,0,0,0.2); */
+    border-radius: 3px;
+}
+
+.year
+{
+    font: 16px Georgia;
+    line-height: 26px;
+
+    float: left;
+
+    width: 300px;
+    height: 30px;
+
+    cursor: pointer;
+    -webkit-transition: all .1s ease-out;
+    text-align: center;
+
+    color: rgba(255, 255, 255, .4);
+}
+
+.year:hover,
+.year.active
+{
+    font-size: 20px;
+
+    color: #fff;
+}
+
+#ce span
+{
+    display: none;
+}
+
+#ce
+{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+
+    display: block;
+
+    width: 107px;
+    height: 55px;
+
+    background: url(/globe/ce.png);
+}
+
+.globeParent
+{
+    height: 80vh;
+}
+
+ canvas
+{
+    left: 25px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "goole_sentiment_ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "emojify": "^1.0.0",
+    "emoticons": "^0.1.8",
+    "loadash": "^1.0.0",
+    "material-ui": "^0.19.4",
+    "react": "^16.1.1",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17",
+    "react-webgl-globe-basic-example": "^0.0.2",
+    "three": "^0.88.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "firebase": "^4.6.2"
+  }
+}
