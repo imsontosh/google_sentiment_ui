@@ -31,22 +31,16 @@ class Overview extends Component {
           <div className="progress">
             <ProgressBar bsStyle={calculateView(this.props.sentiment_overview).style} now={calculateView(this.props.sentiment_overview).now} label={`${calculateView(this.props.sentiment_overview).now}%`} />
           </div>
-          <h4>Positive Sentiments </h4>
+          <h4>Degree of Satisfaction </h4>
           <div className="progress">
           <ProgressBar bsStyle={calculateView(this.props.postive).style} now={(this.props.postive * 100).toFixed(2)} label={`${(this.props.postive * 100).toFixed(2)}%`} />
 
           </div>
-          <h4>Negative Sentiments </h4>
+          <h4>Degree of Disatisfaction </h4>
           <div className="progress">
           <ProgressBar bsStyle={'danger'} now={Math.abs((this.props.negative * 100).toFixed(2))} label={`${Math.abs((this.props.negative * 100).toFixed(2))}%`} />
 
           </div>
-          <h4>Neutral Sentiments </h4>
-          <div className="progress">
-          <ProgressBar bsStyle={'warning'} now={Math.abs((this.props.neutral * 100).toFixed(2))} label={`${Math.abs((this.props.neutral * 100).toFixed(2))}%`} />
-
-          </div>
-
         </div>
       </div>
     );

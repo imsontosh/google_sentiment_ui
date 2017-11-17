@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Overview from '../shared/overview';
 import Review from '../shared/review';
+import ProductOverview from '../shared/product';
 import firebase from '../shared/FB';
 import _ from 'lodash';
 import { ProgressBar, Row, Col } from 'react-bootstrap';
@@ -19,7 +20,8 @@ class Body extends Component {
     const itemsRef = firebase.database().ref('sentiment');
     itemsRef.on('value', snapshot => {
       let items = snapshot.val();
-      const reviewList = _.values(items)[0].data;
+
+      const reviewList = items ? _.values(items)[0].data : [];
       let newState = [];
       let overallsentiment = 0;
       let postive =0, negative = 0 , neutral = 0;
@@ -56,16 +58,31 @@ class Body extends Component {
     return (
       <Row className="show-grid">
         <Col xs={6} md={6}>
-
+          <Row className="show-grid">
           <div>
             <div className="App-intro">
-              <Overview
-                allReview={this.state.allReview}
-                sentiment_overview={this.state.sentiment_overview}
-                postive={this.state.postive}
-                negative={this.state.negative}
-                neutral={this.state.neutral}
-              />
+              <h2>Data Shown for India</h2>  
+              <Row className="show-grid">
+                <Col xs={6} md={6}>
+                  <Overview
+                    allReview={this.state.allReview}
+                    sentiment_overview={this.state.sentiment_overview}
+                    postive={this.state.postive}
+                    negative={this.state.negative}
+                    neutral={this.state.neutral}
+                  />
+                </Col>
+                <Col xs={6} md={6}>
+                  <ProductOverview
+                    allReview={this.state.allReview}
+                    sentiment_overview={this.state.sentiment_overview}
+                    postive={this.state.postive}
+                    negative={this.state.negative}
+                    neutral={this.state.neutral}
+                  />
+                </Col>
+              </Row>
+
 
               <div className="fluid_parent">
                 <div className="fluid">
@@ -90,14 +107,14 @@ class Body extends Component {
             <div className="clearfix visible-xs-block" />
 
           </div>
-
+          </Row>
         </Col>
         <Col xs={6} md={6}>
           <div className="App-intro">
             <div className="fluid_parent">
               <div className="fluid">
                 <h4>Global Reviews </h4>
-                  <WebGLGlobe/>
+                  {this.state.allReview.length > 0 && <WebGLGlobe  allReview={this.state.allReview}/>}
               </div>
             </div>
           </div>

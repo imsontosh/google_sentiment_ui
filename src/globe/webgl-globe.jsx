@@ -69,6 +69,9 @@ class WebGLGlobe extends Component {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
+            if(self.props.allReview.length === 0){
+              data = [["Multidimensional Poverty Index", [] ], ["People affected (in thousands)", [] ], ["Intensity of Deprivation", [] ] ];
+            }
             window.data = data;
             for (i = 0; i < data.length; i++) {
               globe.addData(data[i][1], { format: 'magnitude', name: data[i][0], animated: true });

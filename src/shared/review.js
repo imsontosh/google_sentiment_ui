@@ -35,7 +35,7 @@ class Review extends Component {
         <Tab label="Negative">
           <div>
             <List>
-              <Subheader>Neutral reviews</Subheader>
+              <Subheader>Negative reviews</Subheader>
               {this.props.allReview.filter(item => item.emotion === 'negative').map((item, index) => {
                 return (
                   <ListItem
@@ -83,7 +83,7 @@ class Review extends Component {
         <Tab label="Positive">
           <div>
             <List>
-              <Subheader>Neutral reviews</Subheader>
+              <Subheader>Positive reviews</Subheader>
               {this.props.allReview.filter(item => item.emotion === 'positive').map((item, index) => {
                 return (
                   <ListItem
