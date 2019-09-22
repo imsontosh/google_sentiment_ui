@@ -10,7 +10,7 @@
     "material-ui": "^0.19.4",
     "react": "^16.1.1",
     "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.1.1",
+    "react-dom": "^16.1.2",
     "react-scripts": "1.0.17",
     "react-webgl-globe-basic-example": "^0.0.2",
     "three": "^0.88.0"
