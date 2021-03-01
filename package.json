@@ -13,7 +13,7 @@
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17",
     "react-webgl-globe-basic-example": "^0.0.2",
-    "three": "^0.88.0"
+    "three": "^0.125.0"
   },
   "scripts": {
     "start": "react-scripts start",
